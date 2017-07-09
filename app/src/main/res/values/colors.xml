@@ -3,4 +3,18 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="textTitle">#FF2D383E</color>
+    <color name="textDescription">#656565</color>
+    <color name="textBlack">#222222</color>
+    <color name="textWhite">#ffffff</color>
+    <color name="background">#fdfdfd</color>
+
+    <color name="btnCloseGray">#808191</color>
+    <color name="btnDisabledGray">#cccccc</color>
+    <color name="btnEnabledPurple">#6e2b77</color>
+
+    <color name="divider">#bdbdbd</color>
+    <color name="btnBackgroundPressed">#dbdbdb</color>
+
 </resources>
