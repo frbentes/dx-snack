@@ -4,6 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="dextra.com.br.dxsnack.ui.snack.SnackDetailActivity">
+    tools:context="dextra.com.br.dxsnack.ui.snack.SnackActivity">
 
 </android.support.constraint.ConstraintLayout>
