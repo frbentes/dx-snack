@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">DxSnack</string>
+
+    <string name="activity_title_menu">Menu</string>
+    <string name="activity_title_promo">Promoções</string>
+    <string name="activity_title_cart">Carrinho de Compras</string>
+
+    <string name="no_results">Ops, nenhum resultado encontrado.</string>
+
+    <!-- navigation view -->
+    <string name="drw_user">DxSnack</string>
+    <string name="drw_email">dxsnack@dextra.com.br</string>
+    <string name="drw_menu_home">Menu</string>
+    <string name="drw_menu_promo">Promoções</string>
+    <string name="drw_menu_cart">Carrinho</string>
+    <string name="drawer_open" translatable="false">Abrir navegação</string>
+    <string name="drawer_close" translatable="false">Fechar navegação</string>
+
 </resources>

@@ -5,6 +5,11 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:listDivider">@color/colorDivider</item>
+        <item name="toolbarStyle">@style/AppTheme.ToolBarStyle</item>
+        <item name="drawerArrowStyle">@style/AppTheme.DrawerArrowStyle</item>
     </style>
 
     <style name="AppTheme.Title">
@@ -18,6 +23,39 @@
         <item name="android:textColor">@color/textDescription</item>
         <item name="android:typeface">sans</item>
         <item name="android:lineSpacingExtra">6dp</item>
+    </style>
+
+    <style name="AppTheme.ToolBarStyle" parent="Widget.AppCompat.Toolbar">
+        <item name="titleTextAppearance">@style/Toolbar.TitleText</item>
+    </style>
+
+    <style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="AppTheme.DrawerArrowStyle" parent="@style/Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">true</item>
+        <item name="color">@android:color/white</item>
+    </style>
+
+    <style name="AppTheme.NavigationDrawerStyle">
+        <item name="android:textSize">13sp</item>
+        <item name="android:listDivider">@color/drawer_menu_separator</item>
+    </style>
+
+    <style name="FeedbackStyle">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/feedback_text_color</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="FeedbackTitle" parent="FeedbackStyle">
+        <item name="android:textSize">15.5sp</item>
+    </style>
+
+    <style name="FeedbackMessage" parent="FeedbackStyle">
+        <item name="android:textSize">11.5sp</item>
     </style>
 
 </resources>

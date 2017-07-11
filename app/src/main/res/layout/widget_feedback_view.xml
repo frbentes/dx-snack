@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:id="@+id/tvTitle"
+        style="@style/FeedbackTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tvMessage"
+        style="@style/FeedbackMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/feedback_msg_margin_top" />
+</merge>

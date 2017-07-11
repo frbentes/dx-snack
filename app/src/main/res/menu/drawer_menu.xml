@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.menu.MenuActivity">
+
+    <group
+        android:id="@+id/features_actions"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/drawer_home_item"
+            android:icon="@drawable/ic_home"
+            android:title="@string/drw_menu_home" />
+
+        <item
+            android:id="@+id/drawer_promo_item"
+            android:icon="@drawable/ic_promo"
+            android:title="@string/drw_menu_promo" />
+
+        <item
+            android:id="@+id/drawer_cart_item"
+            android:icon="@drawable/ic_cart"
+            android:title="@string/drw_menu_cart" />
+    </group>
+</menu>

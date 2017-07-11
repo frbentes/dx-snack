@@ -13,16 +13,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.menu.MenuActivity">
+        <activity android:name=".ui.menu.MenuActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.snack.SnackActivity" />
-        <activity android:name=".ui.promo.PromoActivity" />
-        <activity android:name=".ui.cart.CartActivity" />
+        <activity android:name=".ui.snack.SnackActivity" android:screenOrientation="portrait" />
+        <activity android:name=".ui.promo.PromoActivity" android:screenOrientation="portrait" />
+        <activity android:name=".ui.cart.CartActivity" android:screenOrientation="portrait" />
     </application>
 
 </manifest>
