@@ -44,6 +44,25 @@
         <item name="android:listDivider">@color/drawer_menu_separator</item>
     </style>
 
+    <style name="ListItemText">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/textTitle</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="ListItemSubText">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/textDescription</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="ListItemPrice">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/textDescription</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
     <style name="FeedbackStyle">
         <item name="android:gravity">center</item>
         <item name="android:textColor">@color/feedback_text_color</item>

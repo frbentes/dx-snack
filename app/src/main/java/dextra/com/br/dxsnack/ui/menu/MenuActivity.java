@@ -9,19 +9,27 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ProgressBar;
+
+import java.util.List;
 
 import javax.inject.Inject;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import dextra.com.br.dxsnack.R;
+import dextra.com.br.dxsnack.app.DxFeedbackView;
 import dextra.com.br.dxsnack.app.DxSnackApplication;
+import dextra.com.br.dxsnack.model.Snack;
 import dextra.com.br.dxsnack.ui.cart.CartActivity;
 import dextra.com.br.dxsnack.ui.promo.PromoActivity;
 
-public class MenuActivity extends AppCompatActivity {
+public class MenuActivity extends AppCompatActivity implements MenuView {
 
     @Inject
     MenuPresenter presenter;
@@ -29,13 +37,23 @@ public class MenuActivity extends AppCompatActivity {
     @BindView(R.id.tb_menu)
     Toolbar toolbar;
 
+    @BindView(R.id.rv_snacks)
+    RecyclerView rvSnacks;
+
     @BindView(R.id.drw_layout)
     DrawerLayout drawerLayout;
 
     @BindView(R.id.nv_menu)
     NavigationView navigationView;
 
+    @BindView(R.id.fv_menu)
+    DxFeedbackView feedbackView;
+
+    @BindView(R.id.pb_menu)
+    ProgressBar progressBar;
+
     private ActionBarDrawerToggle drawerToggle;
+    private MenuAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +66,10 @@ public class MenuActivity extends AppCompatActivity {
 
         setupToolbar();
         setupDrawer();
+        setupRecyclerView();
+
+        this.presenter.setView(this);
+        this.presenter.getSnacks();
     }
 
     private void setupToolbar() {
@@ -105,6 +127,31 @@ public class MenuActivity extends AppCompatActivity {
     private void showCartActivity() {
         Intent intent = new Intent(this, CartActivity.class);
         startActivity(intent);
+    }
+
+    private void setupRecyclerView() {
+        this.adapter = new MenuAdapter();
+        final LinearLayoutManager llm = new LinearLayoutManager(getApplicationContext());
+        llm.setOrientation(LinearLayoutManager.VERTICAL);
+        this.rvSnacks.setLayoutManager(llm);
+        this.rvSnacks.setAdapter(adapter);
+    }
+
+    @Override
+    public void loadSnacks(List<Snack> snacks) {
+
+    }
+
+    @Override
+    public void showLoading() {
+        this.progressBar.setVisibility(View.VISIBLE);
+        this.feedbackView.setVisibility(View.GONE);
+        this.rvSnacks.setVisibility(View.GONE);
+    }
+
+    @Override
+    public void hideLoading() {
+        this.progressBar.setVisibility(View.GONE);
     }
 
     @Override

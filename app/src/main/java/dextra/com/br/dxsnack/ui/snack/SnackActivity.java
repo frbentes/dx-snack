@@ -8,6 +8,8 @@ import dextra.com.br.dxsnack.app.DxSnackApplication;
 
 public class SnackActivity extends AppCompatActivity {
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

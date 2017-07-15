@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/list_item_padding">
+
+    <ImageView
+        android:id="@+id/iv_snack_photo"
+        android:layout_width="@dimen/list_item_image_width"
+        android:layout_height="@dimen/list_item_image_height"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="@dimen/list_item_margin"
+        android:adjustViewBounds="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/iv_snack_photo"
+        android:layout_toLeftOf="@+id/tv_snack_price"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_snack_name"
+            style="@style/ListItemText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1" />
+
+        <TextView
+            android:id="@+id/tv_snack_ingredients"
+            style="@style/ListItemSubText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/sub_text_margin_top"
+            android:maxLines="2" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_snack_price"
+        style="@style/ListItemPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/list_item_margin" />
+</RelativeLayout>
